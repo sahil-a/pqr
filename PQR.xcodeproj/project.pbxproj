@@ -19,6 +19,7 @@
 		BA970C821CBA078E00878A76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C811CBA078E00878A76 /* LoginViewController.swift */; };
 		BA970C841CBA0A0100878A76 /* LoginMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C831CBA0A0100878A76 /* LoginMenu.swift */; };
 		BA970C861CBA0A3100878A76 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA970C851CBA0A3100878A76 /* MenuView.xib */; };
+		BA970C881CBA2A9000878A76 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C871CBA2A9000878A76 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BA970C811CBA078E00878A76 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA970C831CBA0A0100878A76 /* LoginMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMenu.swift; sourceTree = "<group>"; };
 		BA970C851CBA0A3100878A76 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		BA970C871CBA2A9000878A76 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		BA970C7C1CB9F0E600878A76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA970C871CBA2A9000878A76 /* MainViewController.swift */,
 				BA970C811CBA078E00878A76 /* LoginViewController.swift */,
 				BA970C781CB9F0C500878A76 /* FeaturePageViewController.swift */,
 				BA970C7D1CB9F3EA00878A76 /* PageController.swift */,
@@ -260,6 +263,7 @@
 				BA970C791CB9F0C500878A76 /* FeaturePageViewController.swift in Sources */,
 				BA970C5A1CB9B84A00878A76 /* AppDelegate.swift in Sources */,
 				BA970C841CBA0A0100878A76 /* LoginMenu.swift in Sources */,
+				BA970C881CBA2A9000878A76 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

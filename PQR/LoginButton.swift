@@ -10,9 +10,17 @@ import UIKit
 
 @IBDesignable class LoginButton: UIButton {
     
+    @IBInspectable var cornerRad: CGFloat = 5.0 {
+        
+        didSet {
+            
+            setNeedsDisplay()
+        }
+    }
+    
     override func drawRect(rect: CGRect) {
         
-        layer.cornerRadius = 5
+        layer.cornerRadius = cornerRad
         layer.masksToBounds = true
     }
 }

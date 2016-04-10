@@ -86,7 +86,7 @@ class LoginViewController: PageController, LoginReceiver {
                     // an error occured while attempting login
                 } else {
                     // user is logged in, check authData for data
-                    
+                    self.performSegueWithIdentifier("next", sender: self)
                 }
             }
             
@@ -107,6 +107,7 @@ class LoginViewController: PageController, LoginReceiver {
                     //  - https://<YOUR-FIREBASE-APP>.firebaseio.com/users/<uid>
                     ref.childByAppendingPath("users")
                         .childByAppendingPath(uid).setValue(newUser)
+                    self.performSegueWithIdentifier("next", sender: self)
                 }
             })
         }
