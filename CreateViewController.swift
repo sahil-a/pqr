@@ -30,39 +30,49 @@ class CreateViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func okClicked() {
         
         //report working image, increment counter, change user array, and reload table view
-        let working = User.currentUser.workingCode
-        
-        dispatch_async(dispatch_get_main_queue()) {
-            UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 5, options: [], animations: {
-                
-                self.customView.center = CGPointMake(self.view.center.x, 1.5 * self.view.center.y)
-                
-                
-                
-                }, completion: { (bool) -> () in })
+        guard let _ = User.currentUser.workingCode else {
+            
+            return
         }
+        
+        
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10, options: [], animations: {
+                
+                self.customView.center = CGPointMake(self.view.center.x, 3.5 * self.view.center.y)
+                
+                
+                
+                }, completion: { (bool) -> () in self.customView.removeFromSuperview()})
+        
         
         var c_ref = REF.childByAppendingPath("counter")
         c_ref.setValue(User.currentUser.workingCode.id+1)
         
         c_ref = REF.childByAppendingPath("codes")
         
-        c_ref.observeEventType(.Value, withBlock: {snapshot2 in
+        c_ref.observeSingleEventOfType(.Value, withBlock: {snapshot2 in
             if var codes_raw = snapshot2.value as? [[String:AnyObject]] {
-                codes_raw.append(["description" : working.description, "title" : working.title, "id" : working.id, "users" : working.allowedUsers, "passcode": working.passcode])
-                c_ref.setValue(codes_raw, withCompletionBlock: { error, base in self.rl()})
+                codes_raw.append(["description" : User.currentUser.workingCode.description, "title" : User.currentUser.workingCode.title, "id" : User.currentUser.workingCode.id, "users" : User.currentUser.workingCode.allowedUsers, "passcode": User.currentUser.workingCode.passcode])
+                c_ref.setValue(codes_raw, withCompletionBlock: { error, base in
+                
+                    let local = REF_USERS.childByAppendingPath(User.currentUser.id).childByAppendingPath("codes")
+                    local.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                        
+                        if var ids = snapshot?.value as? [Int] {
+                            
+                            ids.append(User.currentUser.workingCode.id)
+                            local.setValue(ids)
+                            
+                            User.currentUser.workingCode = nil
+                            self.rl()
+                        }
+                    })
+                })
             }
         })
         
-        let local = REF_USERS.childByAppendingPath(User.currentUser.id).childByAppendingPath("codes")
-        local.observeEventType(.Value, withBlock: { snapshot in
-            
-            if var ids = snapshot.value as? [Int] {
-                
-                ids.append(working.id)
-                local.setValue(ids)
-            }
-        })
+        
+
 
 
         
@@ -83,21 +93,21 @@ class CreateViewController: UIViewController, UITableViewDelegate, UITableViewDa
         indicator.startAnimating()
         indicator.hidden = false
         
-        if var working = User.currentUser.workingCode {
+        if let _ = User.currentUser.workingCode {
             let c_ref = REF.childByAppendingPath("counter")
-            c_ref.observeEventType(.Value, withBlock: {snapshot2 in
+            c_ref.observeSingleEventOfType(.Value, withBlock: {snapshot2 in
                 if let count = snapshot2.value as? Int {
                     
-                    working.id = count
+                    User.currentUser.workingCode.id = count
                     // increment count
                     
-                    if let img = createQRFromString("\(working.id): \(working.title) :: \(working.description)") {
+                    if let img = createQRFromString("\(User.currentUser.workingCode.id)") {
                         let somImage = UIImage(CIImage: img, scale: 1.0, orientation: UIImageOrientation.Down)
                         
                         
                         if let cv = NSBundle.mainBundle().loadNibNamed("ResultView", owner: self, options: nil).first as? ResultView {
                             self.customView = cv
-                            self.customView.frame.size = CGSizeMake(280, 400)
+                            self.customView.frame.size = CGSizeMake(300, 400)
                             self.view.addSubview(self.customView)
                             self.customView.center = CGPointMake(self.view.center.x, 1.5 * self.view.center.y)
                             self.customView.imageView.image = somImage
@@ -117,20 +127,21 @@ class CreateViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     }
                 }
             })
-        }
+        } else {
         
-        rl()
+            rl()
+        }
     }
     
     func rl() {
         let local = REF_USERS.childByAppendingPath(User.currentUser.id).childByAppendingPath("codes")
-        local.observeEventType(.Value, withBlock: { snapshot in
+        local.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             if let ids = snapshot.value as? [Int] {
                 
                 let c_ref = REF.childByAppendingPath("codes")
                 
-                c_ref.observeEventType(.Value, withBlock: {snapshot2 in
+                c_ref.observeSingleEventOfType(.Value, withBlock: {snapshot2 in
                     
                     if let codes_raw = snapshot2.value as? [[String:AnyObject]] {
                         

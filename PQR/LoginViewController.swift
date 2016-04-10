@@ -88,7 +88,13 @@ class LoginViewController: PageController, LoginReceiver {
                 } else {
                     // user is logged in, check authData for data
                     User.currentUser.id = authData.uid
-                    self.performSegueWithIdentifier("next", sender: self)
+                    UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 5, options: [], animations: {
+                        
+                        self.menu!.frame.origin = CGPointMake(0, -self.menu!.frame.size.height)
+                        
+                        
+                        }, completion: { (bool) -> () in self.performSegueWithIdentifier("next", sender: self) })
+                    
                 }
             }
             
@@ -104,12 +110,14 @@ class LoginViewController: PageController, LoginReceiver {
                 } else {
                     
                     let uid = values["uid"] as! String
-                    let newUser = ["email": email]
+                    let newUser = ["email": email, "codes": [-1]]
+                    
                     // Create a child path with a key set to the uid underneath the "users" node
                     // This creates a URL path like the following:
                     //  - https://<YOUR-FIREBASE-APP>.firebaseio.com/users/<uid>
                     ref.childByAppendingPath("users")
                         .childByAppendingPath(uid).setValue(newUser)
+                    
                     self.tryingLogin = true
                     self.tryingSignUp = false
                     self.didFinishEnteringDetails(email, password: password)

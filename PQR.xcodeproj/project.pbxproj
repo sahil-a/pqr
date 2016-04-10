@@ -26,6 +26,7 @@
 		BA970C941CBA8C4000878A76 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C931CBA8C4000878A76 /* SecondDetailViewController.swift */; };
 		BA970C961CBA90C000878A76 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C951CBA90C000878A76 /* ResultView.swift */; };
 		BA970C981CBA910200878A76 /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA970C971CBA910200878A76 /* ResultView.xib */; };
+		BAB207491CBAC7A0001994DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB207481CBAC7A0001994DC /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		BA970C931CBA8C4000878A76 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
 		BA970C951CBA90C000878A76 /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		BA970C971CBA910200878A76 /* ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
+		BAB207481CBAC7A0001994DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				BA970C8B1CBA4A6700878A76 /* CreateViewController.swift */,
 				BA970C871CBA2A9000878A76 /* MainViewController.swift */,
 				BA970C811CBA078E00878A76 /* LoginViewController.swift */,
+				BAB207481CBAC7A0001994DC /* ViewController.swift */,
 				BA970C781CB9F0C500878A76 /* FeaturePageViewController.swift */,
 				BA970C7D1CB9F3EA00878A76 /* PageController.swift */,
 			);
@@ -279,6 +282,7 @@
 				BA970C821CBA078E00878A76 /* LoginViewController.swift in Sources */,
 				BA970C801CB9F85D00878A76 /* LoginButton.swift in Sources */,
 				BA970C7E1CB9F3EA00878A76 /* PageController.swift in Sources */,
+				BAB207491CBAC7A0001994DC /* ViewController.swift in Sources */,
 				BA970C791CB9F0C500878A76 /* FeaturePageViewController.swift in Sources */,
 				BA970C921CBA803200878A76 /* FirstDetailViewController.swift in Sources */,
 				BA970C941CBA8C4000878A76 /* SecondDetailViewController.swift in Sources */,

@@ -30,6 +30,7 @@ class MainViewController: UIViewController, DGRunkeeperSwitchDelegate {
     override func viewDidAppear(animated: Bool) {
         setupSwitch()
         containerView.addSubview(createViewController.view)
+        self.addChildViewController(createViewController)
         createViewController.view.frame = CGRect(origin: CGPointZero, size: containerView.frame.size)
         selected(0)
     }
@@ -55,9 +56,12 @@ class MainViewController: UIViewController, DGRunkeeperSwitchDelegate {
     
     func selected(index: Int) {
         containerView.subviews[0].removeFromSuperview()
-        let vc = (index == 0) ? createViewController.view : viewViewController.view
-        containerView.addSubview(vc)
-        vc.frame = CGRect(origin: CGPointZero, size: containerView.frame.size)
+        let vc = (index == 0) ? createViewController : viewViewController
+        let ovc = (index == 1) ? createViewController : viewViewController
+        ovc.removeFromParentViewController()
+        containerView.addSubview(vc.view)
+        vc.view.frame = CGRect(origin: CGPointZero, size: containerView.frame.size)
+        self.addChildViewController(vc)
 
     }
     
