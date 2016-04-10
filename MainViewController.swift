@@ -14,9 +14,25 @@ class MainViewController: UIViewController, DGRunkeeperSwitchDelegate {
     @IBOutlet weak var navBar: UIView!
     @IBOutlet weak var containerView: UIView!
     var runkeeperSwitch: DGRunkeeperSwitch!
+    var createViewController: UIViewController {
+        get {
+            let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            return storyboard.instantiateViewControllerWithIdentifier("create")
+        }
+    }
+    var viewViewController: UIViewController {
+        get {
+            let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            return storyboard.instantiateViewControllerWithIdentifier("view")
+        }
+    }
 
     override func viewDidAppear(animated: Bool) {
-        setupSwitch()    }
+        setupSwitch()
+        containerView.addSubview(createViewController.view)
+        createViewController.view.frame = CGRect(origin: CGPointZero, size: containerView.frame.size)
+        selected(0)
+    }
     
     func setupSwitch() {
         
@@ -38,7 +54,11 @@ class MainViewController: UIViewController, DGRunkeeperSwitchDelegate {
     }
     
     func selected(index: Int) {
-        
+        containerView.subviews[0].removeFromSuperview()
+        let vc = (index == 0) ? createViewController.view : viewViewController.view
+        containerView.addSubview(vc)
+        vc.frame = CGRect(origin: CGPointZero, size: containerView.frame.size)
+
     }
     
     override func prefersStatusBarHidden() -> Bool {
