@@ -10,7 +10,6 @@
 		4545C511654228888F45BE10 /* Pods_PQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B25CA86530686C6DEDD41D0 /* Pods_PQR.framework */; };
 		BA970C5A1CB9B84A00878A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C591CB9B84A00878A76 /* AppDelegate.swift */; };
 		BA970C5F1CB9B84A00878A76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA970C5D1CB9B84A00878A76 /* Main.storyboard */; };
-		BA970C621CB9B84A00878A76 /* PQR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA970C601CB9B84A00878A76 /* PQR.xcdatamodeld */; };
 		BA970C641CB9B84A00878A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA970C631CB9B84A00878A76 /* Assets.xcassets */; };
 		BA970C671CB9B84A00878A76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA970C651CB9B84A00878A76 /* LaunchScreen.storyboard */; };
 		BA970C791CB9F0C500878A76 /* FeaturePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C781CB9F0C500878A76 /* FeaturePageViewController.swift */; };
@@ -20,6 +19,13 @@
 		BA970C841CBA0A0100878A76 /* LoginMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C831CBA0A0100878A76 /* LoginMenu.swift */; };
 		BA970C861CBA0A3100878A76 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA970C851CBA0A3100878A76 /* MenuView.xib */; };
 		BA970C881CBA2A9000878A76 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C871CBA2A9000878A76 /* MainViewController.swift */; };
+		BA970C8A1CBA47EF00878A76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C891CBA47EF00878A76 /* User.swift */; };
+		BA970C8C1CBA4A6700878A76 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C8B1CBA4A6700878A76 /* CreateViewController.swift */; };
+		BA970C8E1CBA55CE00878A76 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C8D1CBA55CE00878A76 /* Code.swift */; };
+		BA970C921CBA803200878A76 /* FirstDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C911CBA803200878A76 /* FirstDetailViewController.swift */; };
+		BA970C941CBA8C4000878A76 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C931CBA8C4000878A76 /* SecondDetailViewController.swift */; };
+		BA970C961CBA90C000878A76 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA970C951CBA90C000878A76 /* ResultView.swift */; };
+		BA970C981CBA910200878A76 /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA970C971CBA910200878A76 /* ResultView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +35,6 @@
 		BA970C561CB9B84800878A76 /* PQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA970C591CB9B84A00878A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA970C5E1CB9B84A00878A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BA970C611CB9B84A00878A76 /* PQR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PQR.xcdatamodel; sourceTree = "<group>"; };
 		BA970C631CB9B84A00878A76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA970C661CB9B84A00878A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA970C681CB9B84A00878A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +45,13 @@
 		BA970C831CBA0A0100878A76 /* LoginMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMenu.swift; sourceTree = "<group>"; };
 		BA970C851CBA0A3100878A76 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		BA970C871CBA2A9000878A76 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		BA970C891CBA47EF00878A76 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BA970C8B1CBA4A6700878A76 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = ../CreateViewController.swift; sourceTree = "<group>"; };
+		BA970C8D1CBA55CE00878A76 /* Code.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
+		BA970C911CBA803200878A76 /* FirstDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstDetailViewController.swift; sourceTree = "<group>"; };
+		BA970C931CBA8C4000878A76 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
+		BA970C951CBA90C000878A76 /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		BA970C971CBA910200878A76 /* ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				BA970C5D1CB9B84A00878A76 /* Main.storyboard */,
+				BA970C951CBA90C000878A76 /* ResultView.swift */,
+				BA970C971CBA910200878A76 /* ResultView.xib */,
 				BA970C831CBA0A0100878A76 /* LoginMenu.swift */,
 				BA970C851CBA0A3100878A76 /* MenuView.xib */,
 				BA970C631CB9B84A00878A76 /* Assets.xcassets */,
@@ -108,7 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				BA970C591CB9B84A00878A76 /* AppDelegate.swift */,
-				BA970C601CB9B84A00878A76 /* PQR.xcdatamodeld */,
+				BA970C891CBA47EF00878A76 /* User.swift */,
+				BA970C8D1CBA55CE00878A76 /* Code.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -116,6 +131,9 @@
 		BA970C7C1CB9F0E600878A76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA970C931CBA8C4000878A76 /* SecondDetailViewController.swift */,
+				BA970C911CBA803200878A76 /* FirstDetailViewController.swift */,
+				BA970C8B1CBA4A6700878A76 /* CreateViewController.swift */,
 				BA970C871CBA2A9000878A76 /* MainViewController.swift */,
 				BA970C811CBA078E00878A76 /* LoginViewController.swift */,
 				BA970C781CB9F0C500878A76 /* FeaturePageViewController.swift */,
@@ -194,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA970C981CBA910200878A76 /* ResultView.xib in Resources */,
 				BA970C671CB9B84A00878A76 /* LaunchScreen.storyboard in Resources */,
 				BA970C861CBA0A3100878A76 /* MenuView.xib in Resources */,
 				BA970C641CB9B84A00878A76 /* Assets.xcassets in Resources */,
@@ -256,11 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA970C8C1CBA4A6700878A76 /* CreateViewController.swift in Sources */,
 				BA970C821CBA078E00878A76 /* LoginViewController.swift in Sources */,
 				BA970C801CB9F85D00878A76 /* LoginButton.swift in Sources */,
 				BA970C7E1CB9F3EA00878A76 /* PageController.swift in Sources */,
-				BA970C621CB9B84A00878A76 /* PQR.xcdatamodeld in Sources */,
 				BA970C791CB9F0C500878A76 /* FeaturePageViewController.swift in Sources */,
+				BA970C921CBA803200878A76 /* FirstDetailViewController.swift in Sources */,
+				BA970C941CBA8C4000878A76 /* SecondDetailViewController.swift in Sources */,
+				BA970C961CBA90C000878A76 /* ResultView.swift in Sources */,
+				BA970C8A1CBA47EF00878A76 /* User.swift in Sources */,
+				BA970C8E1CBA55CE00878A76 /* Code.swift in Sources */,
 				BA970C5A1CB9B84A00878A76 /* AppDelegate.swift in Sources */,
 				BA970C841CBA0A0100878A76 /* LoginMenu.swift in Sources */,
 				BA970C881CBA2A9000878A76 /* MainViewController.swift in Sources */,
@@ -379,6 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PQR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sahil.PQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,6 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PQR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sahil.PQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,19 +451,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BA970C601CB9B84A00878A76 /* PQR.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BA970C611CB9B84A00878A76 /* PQR.xcdatamodel */,
-			);
-			currentVersion = BA970C611CB9B84A00878A76 /* PQR.xcdatamodel */;
-			path = PQR.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BA970C4E1CB9B84800878A76 /* Project object */;
 }

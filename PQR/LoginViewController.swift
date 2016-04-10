@@ -84,8 +84,10 @@ class LoginViewController: PageController, LoginReceiver {
                 error, authData in
                 if error != nil {
                     // an error occured while attempting login
+                    self.menu?.stop()
                 } else {
                     // user is logged in, check authData for data
+                    User.currentUser.id = authData.uid
                     self.performSegueWithIdentifier("next", sender: self)
                 }
             }
@@ -98,6 +100,7 @@ class LoginViewController: PageController, LoginReceiver {
                 if error != nil {
                     
                     // error occured
+                    self.menu?.stop()
                 } else {
                     
                     let uid = values["uid"] as! String
@@ -107,7 +110,10 @@ class LoginViewController: PageController, LoginReceiver {
                     //  - https://<YOUR-FIREBASE-APP>.firebaseio.com/users/<uid>
                     ref.childByAppendingPath("users")
                         .childByAppendingPath(uid).setValue(newUser)
-                    self.performSegueWithIdentifier("next", sender: self)
+                    self.tryingLogin = true
+                    self.tryingSignUp = false
+                    self.didFinishEnteringDetails(email, password: password)
+                    
                 }
             })
         }

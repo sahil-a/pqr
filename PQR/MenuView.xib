@@ -105,7 +105,9 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="button" destination="D28-6Y-tO8" id="uDd-Zl-1C7"/>
                 <outlet property="emailTextField" destination="Ksr-82-cQ1" id="2QH-AD-c3j"/>
+                <outlet property="imageView" destination="JI2-OM-qBH" id="ijm-w8-Ked"/>
                 <outlet property="passwordTextField" destination="cXL-GW-wif" id="VB8-We-JUO"/>
             </connections>
             <point key="canvasLocation" x="285.5" y="352.5"/>
