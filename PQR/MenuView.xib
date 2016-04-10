@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginMenu" customModule="PQR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AK-2y-KMv">
+                    <rect key="frame" x="19" y="26" width="272" height="84"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXL-GW-wif">
+                            <rect key="frame" x="0.0" y="50" width="272" height="34"/>
+                            <color key="backgroundColor" red="0.83137254900000002" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cXL-GW-wif" secondAttribute="height" multiplier="8:1" id="ZdH-dS-Dym"/>
+                            </constraints>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.81745689659999998" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ksr-82-cQ1">
+                            <rect key="frame" x="0.0" y="0.0" width="272" height="34"/>
+                            <color key="backgroundColor" red="0.83137254900000002" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Ksr-82-cQ1" secondAttribute="height" multiplier="138:17" id="jSp-E9-CYc"/>
+                            </constraints>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.81745689655172415" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ksr-82-cQ1" firstAttribute="width" secondItem="cXL-GW-wif" secondAttribute="width" id="136-Y7-mPz"/>
+                        <constraint firstItem="Ksr-82-cQ1" firstAttribute="top" secondItem="6AK-2y-KMv" secondAttribute="top" id="RfK-AM-Meq"/>
+                        <constraint firstItem="Ksr-82-cQ1" firstAttribute="width" secondItem="6AK-2y-KMv" secondAttribute="width" id="fYD-U9-obv"/>
+                        <constraint firstAttribute="bottom" secondItem="cXL-GW-wif" secondAttribute="bottom" id="kZh-2p-BZK"/>
+                        <constraint firstItem="Ksr-82-cQ1" firstAttribute="leading" secondItem="6AK-2y-KMv" secondAttribute="leading" id="pxt-W4-TwX"/>
+                        <constraint firstItem="cXL-GW-wif" firstAttribute="top" secondItem="Ksr-82-cQ1" secondAttribute="bottom" constant="16" id="sy4-ov-lxP"/>
+                        <constraint firstItem="cXL-GW-wif" firstAttribute="leading" secondItem="6AK-2y-KMv" secondAttribute="leading" id="wy3-YU-Kbg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D28-6Y-tO8" customClass="UIButton">
+                    <rect key="frame" x="291" y="48" width="40" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-OM-qBH">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="JI2-OM-qBH" secondAttribute="bottom" id="KzZ-8e-9G6"/>
+                        <constraint firstItem="JI2-OM-qBH" firstAttribute="top" secondItem="D28-6Y-tO8" secondAttribute="top" id="Sx2-lg-y8g"/>
+                        <constraint firstAttribute="trailing" secondItem="JI2-OM-qBH" secondAttribute="trailing" id="cDF-Ge-jJO"/>
+                        <constraint firstItem="JI2-OM-qBH" firstAttribute="leading" secondItem="D28-6Y-tO8" secondAttribute="leading" id="imj-I4-KAg"/>
+                        <constraint firstAttribute="width" secondItem="D28-6Y-tO8" secondAttribute="height" multiplier="1:1" id="zId-L2-q9g"/>
+                    </constraints>
+                    <connections>
+                        <action selector="next:" destination="iN0-l3-epB" eventType="valueChanged" id="zqu-un-i0C"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.84705882352941175" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="D28-6Y-tO8" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="40:375" id="6EZ-ok-RqY"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D28-6Y-tO8" secondAttribute="trailing" id="I57-hV-Ygo"/>
+                <constraint firstItem="D28-6Y-tO8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LRM-6X-lLn"/>
+                <constraint firstItem="6AK-2y-KMv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OCe-BF-ame"/>
+                <constraint firstItem="6AK-2y-KMv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="19" id="SZK-5A-G8u"/>
+                <constraint firstItem="Ksr-82-cQ1" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="272:375" id="it1-gW-0Kl"/>
+                <constraint firstItem="6AK-2y-KMv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sFM-TL-dXj"/>
+                <constraint firstItem="D28-6Y-tO8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6AK-2y-KMv" secondAttribute="trailing" id="tvp-Yw-JnT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="sFM-TL-dXj"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="emailTextField" destination="Ksr-82-cQ1" id="2QH-AD-c3j"/>
+                <outlet property="passwordTextField" destination="cXL-GW-wif" id="VB8-We-JUO"/>
+            </connections>
+            <point key="canvasLocation" x="285.5" y="352.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="next" width="44" height="44"/>
+    </resources>
+</document>
