@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				BA970C5D1CB9B84A00878A76 /* Main.storyboard */,
-				BA970C811CBA078E00878A76 /* LoginViewController.swift */,
 				BA970C831CBA0A0100878A76 /* LoginMenu.swift */,
 				BA970C851CBA0A3100878A76 /* MenuView.xib */,
 				BA970C631CB9B84A00878A76 /* Assets.xcassets */,
@@ -115,6 +114,7 @@
 		BA970C7C1CB9F0E600878A76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA970C811CBA078E00878A76 /* LoginViewController.swift */,
 				BA970C781CB9F0C500878A76 /* FeaturePageViewController.swift */,
 				BA970C7D1CB9F3EA00878A76 /* PageController.swift */,
 			);

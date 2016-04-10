@@ -22,6 +22,10 @@ class FeaturePageViewController: UIPageViewController {
             instantiateViewControllerWithIdentifier("pagination\(n)")
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()

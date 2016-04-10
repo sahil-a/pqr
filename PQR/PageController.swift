@@ -17,4 +17,8 @@ class PageController: UIViewController {
         titleLabel.font = titleLabel.font.fontWithSize(view.frame.width / 375 * 24)
         descriptionLabel.font = descriptionLabel.font.fontWithSize(view.frame.width / 375 * 21)
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
