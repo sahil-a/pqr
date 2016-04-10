@@ -75,6 +75,8 @@ class LoginViewController: PageController, LoginReceiver {
     
     func didFinishEnteringDetails(email: String, password: String) {
         
+        self.view.endEditing(true)
+        
         if tryingLogin {
             
             let ref = Firebase(url: "https://pqrapp.firebaseio.com")
@@ -98,8 +100,13 @@ class LoginViewController: PageController, LoginReceiver {
                     // error occured
                 } else {
                     
-                    let uid = values["uid"] as? String
-                    print("Successfully created user account with uid: \(uid)")
+                    let uid = values["uid"] as! String
+                    let newUser = ["email": email]
+                    // Create a child path with a key set to the uid underneath the "users" node
+                    // This creates a URL path like the following:
+                    //  - https://<YOUR-FIREBASE-APP>.firebaseio.com/users/<uid>
+                    ref.childByAppendingPath("users")
+                        .childByAppendingPath(uid).setValue(newUser)
                 }
             })
         }

@@ -19,6 +19,11 @@ class LoginMenu: UIView {
         receiver?.didFinishEnteringDetails(emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     
+    override func drawRect(rect: CGRect) {
+        emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0)
+        passwordTextField.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0)
+    }
+    
 }
 
 protocol LoginReceiver {
